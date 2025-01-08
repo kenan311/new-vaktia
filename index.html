@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istighfar & Namaz Times</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu" id="hamburger">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown" id="dropdown">
+    <ul>
+      <li><a href="#" id="vakti">Vakti</a></li>
+      <li><a href="#" id="istighfar">Istighfar</a></li>
+      <li><a href="#" id="qibla">Gjetja e Kiblas</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Vakti Section -->
+    <div id="vakti-section">
+      <h1>Vakti - Namazi</h1>
+      <div class="city-selection">
+        <label for="city-select">Zgjidhni qytetin tuaj:</label>
+        <select id="city-select">
+            <option value="Prishtina">Prishtina</option>
+            <option value="Peja">Peja</option>
+            <option value="Gjakova">Gjakova</option>
+            <option value="Mitrovica">Mitrovica</option>
+            <option value="Podujeva">Podujeva</option>
+            <option value="Fushë Kosova">Fushë Kosova</option>
+            <option value="Gjilan">Gjilan</option>
+            <option value="Ferizaj">Ferizaj</option>
+            <option value="Vushtrri">Vushtrri</option>
+            <option value="Klinë">Klinë</option>
+            <option value="Suharekë">Suharekë</option>
+            <option value="Dragash">Dragash</option>
+            <option value="Rahovec">Rahovec</option>
+            <option value="Kaçanik">Kaçanik</option>
+        </select>
+      </div>
+      <div id="namaz-times">
+        <div class="city" id="city">
+          <h3>Vakti për qytetin tuaj</h3>
+          <div id="times">
+            <p><strong>Fajr:</strong> 05:30 AM</p>
+            <p><strong>Shuruq:</strong> 06:55 AM</p>
+            <p><strong>Dhuhr:</strong> 12:15 PM</p>
+            <p><strong>Asr:</strong> 03:30 PM</p>
+            <p><strong>Maghrib:</strong> 06:00 PM</p>
+            <p><strong>Isha:</strong> 07:30 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Istighfar Section -->
+    <div id="istighfar-section" style="display:none;">
+      <h1>Istighfar Counter</h1>
+      <p>Click the button below to count your istighfar:</p>
+      <div id="counter" class="glow">0</div>
+      <button id="count-btn" class="btn-animate">Say Istighfar</button>
+      <button id="reset-btn" class="btn-animate">Reset</button>
+    </div>
+
+    <!-- Qibla Section -->
+    <div id="qibla-section" style="display: none;">
+        <h2>Qibla Direction</h2>
+        <div id="compass-container">
+          <div id="compass">
+            <div id="needle" class="needle"></div>
+          </div>
+        </div>
+        <p id="qibla-direction">Loading Qibla Direction...</p>
+      </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

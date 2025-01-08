@@ -1,0 +1,332 @@
+/* Përgjithësisht stilimet */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.hamburger-icon .bar {
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown ul li {
+  margin: 10px 0;
+}
+
+.dropdown ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Istighfar Counter Design */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+  max-width: 90%;
+  width: 400px;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#counter {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  animation: pop 0.3s ease;
+}
+
+button {
+  background: #00c6ff;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #007acc;
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  animation: sparkle 1s ease-out;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.glow {
+  text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 30px #00c6ff, 0 0 40px #00c6ff;
+}
+
+/* Efekte animacionesh */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Kompasi */
+#compass-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+}
+
+/* Kompasi në vetvete (rrethi me linjat) */
+#compass {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #333;
+  background-color: #f0f0f0;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Kthetra e kompasit (gishti) */
+.needle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 50%;
+  background-color: #ff4d4d;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
+
+/* Efekti i qartë i shkrimit dhe më të lehtë për sy */
+#compass-container {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Teksti që tregon drejtimin e Kiblas */
+#qibla-direction {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Efekte butonash */
+.btn-animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.3s ease;
+}
+
+.btn-animate:hover::after {
+  left: 100%;
+}
+
+/* Përshtatja për pajisjet mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #counter {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+/* City Dropdown for Namaz Times */
+.city-container {
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+label {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Modern City Dropdown */
+.city-dropdown {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 1.1em;
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-weight: 500;
+}
+
+.city-dropdown::after {
+  content: '\2193';  /* Downward arrow */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.city-dropdown:hover {
+  border-color: #00c6ff;
+  box-shadow: 0 4px 20px rgba(0, 198, 255, 0.2);
+}
+
+.city-dropdown:focus {
+  outline: none;
+  border-color: #00c6ff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.city-dropdown:focus::after {
+  transform: translateY(-50%) rotate(180deg);  /* Arrow rotates when dropdown is focused */
+}
+
+/* Dropdown options styles */
+.city-dropdown option {
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.city-dropdown option:hover {
+  background-color: #00c6ff;
+  color: #fff;
+}
+
+/* Style for the dropdown container */
+.city-dropdown-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Adding hover effect for dropdown container */
+.city-dropdown-container:hover .city-dropdown {
+  border-color: #00c6ff;
+  box-shadow: 0 4px 20px rgba(0, 198, 255, 0.2);
+}
